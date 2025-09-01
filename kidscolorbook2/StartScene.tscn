@@ -1,0 +1,52 @@
+[gd_scene load_steps=4 format=3 uid="uid://cdf5jhrchts03"]
+
+[ext_resource type="AudioStream" uid="uid://bnb6kf01pcml4" path="res://gamestart-272829.wav" id="1_xtwlf"]
+[ext_resource type="AudioStream" uid="uid://ddietequfurbf" path="res://win-sound-68509.wav" id="2_2j6u4"]
+[ext_resource type="AudioStream" uid="uid://c36t77jdgqaxh" path="res://game-over-160612.wav" id="3_kds3s"]
+
+[node name="StartScene" type="Node2D"]
+
+[node name="TitleLabel" type="Label" parent="."]
+offset_left = 257.0
+offset_top = 64.0
+offset_right = 390.0
+offset_bottom = 87.0
+text = "“🎨 GAME START”"
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_xtwlf")
+autoplay = true
+
+[node name="MainGame" type="Node2D" parent="."]
+
+[node name="Button1" type="Button" parent="MainGame"]
+offset_left = 13.0
+offset_top = 66.0
+offset_right = 79.0
+offset_bottom = 97.0
+text = "Orange"
+
+[node name="Button2" type="Button" parent="MainGame"]
+offset_left = 23.0
+offset_top = 129.0
+offset_right = 79.0
+offset_bottom = 160.0
+text = "Green"
+
+[node name="QuestionLabel" type="Label" parent="MainGame"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="ResultLabel" type="Label" parent="MainGame"]
+offset_left = 162.0
+offset_top = 108.0
+offset_right = 202.0
+offset_bottom = 131.0
+
+[node name="WinSound" type="AudioStreamPlayer" parent="MainGame"]
+stream = ExtResource("2_2j6u4")
+autoplay = true
+
+[node name="LoseSound" type="AudioStreamPlayer" parent="MainGame"]
+stream = ExtResource("3_kds3s")
+autoplay = true
